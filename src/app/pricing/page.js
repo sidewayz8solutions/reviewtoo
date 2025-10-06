@@ -275,32 +275,32 @@ export default function PricingPage() {
         </div>
 
         {/* FAQ Section */}
-        <div className=\"mt-20\">
-          <h2 className=\"text-3xl font-bold text-gray-900 text-center mb-12\">
+        <div className="mt-20">
+          <h2 className="text-3xl font-bold text-gray-100 text-center mb-12">
             Frequently Asked Questions
           </h2>
-          <div className=\"max-w-3xl mx-auto space-y-8\">
-            <div className=\"bg-white rounded-2xl p-6 shadow-sm\">
-              <h3 className=\"text-xl font-bold text-gray-900 mb-3\">
+          <div className="max-w-3xl mx-auto space-y-8">
+            <div className="bg-dark-800 rounded-2xl p-6 border border-purple-500/20">
+              <h3 className="text-xl font-bold text-gray-100 mb-3">
                 Can I cancel my subscription anytime?
               </h3>
-              <p className=\"text-gray-600\">
+              <p className="text-gray-300">
                 Yes! You can cancel your Pro subscription at any time. You'll continue to have access to Pro features until the end of your current billing period.
               </p>
             </div>
-            <div className=\"bg-white rounded-2xl p-6 shadow-sm\">
-              <h3 className="text-xl font-bold text-gray-900 mb-3">
+            <div className="bg-dark-800 rounded-2xl p-6 border border-purple-500/20">
+              <h3 className="text-xl font-bold text-gray-100 mb-3">
                 Is there a free trial for the Pro plan?
               </h3>
-              <p className="text-gray-600">
+              <p className="text-gray-300">
                 While we don't offer a traditional free trial, our free plan gives you 1 lesson plan to try out ReviewToo. You can upgrade to Pro whenever you're ready for unlimited lessons.
               </p>
             </div>
-            <div className=\"bg-white rounded-2xl p-6 shadow-sm\">
-              <h3 className=\"text-xl font-bold text-gray-900 mb-3\">
+            <div className="bg-dark-800 rounded-2xl p-6 border border-purple-500/20">
+              <h3 className="text-xl font-bold text-gray-100 mb-3">
                 What payment methods do you accept?
               </h3>
-              <p className=\"text-gray-600\">
+              <p className="text-gray-300">
                 We accept all major credit cards and debit cards through Stripe, our secure payment processor. Your payment information is never stored on our servers.
               </p>
             </div>
