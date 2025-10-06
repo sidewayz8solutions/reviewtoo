@@ -1,12 +1,14 @@
 'use client'
+export const dynamic = 'force-dynamic'
 
-import { useState, useEffect } from 'react'
+
+import { useState, useEffect, Suspense } from 'react'
 import { useRouter, useSearchParams } from 'next/navigation'
 import { BookOpen, Search, Trash2, Download, X, Loader, Target, CheckCircle } from 'lucide-react'
 import { getCurrentUser, getUserLessons, deleteLesson } from '@/lib/supabase'
 import { formatDate, downloadPDF } from '@/lib/utils'
 
-export default function LibraryPage() {
+function LibraryContent() {
   const router = useRouter()
   const searchParams = useSearchParams()
   const [user, setUser] = useState(null)
@@ -293,6 +295,16 @@ export default function LibraryPage() {
           </div>
         </div>
       )}
+
     </div>
   )
 }
+
+export default function LibraryPage() {
+  return (
+    <Suspense fallback={<div className="min-h-screen bg-gradient-to-br from-dark-900 via-dark-800 to-dark-900 flex items-center justify-center"><Loader className="w-12 h-12 text-purple-400 animate-spin" /></div>}>
+      <LibraryContent />
+    </Suspense>
+  )
+}
+
