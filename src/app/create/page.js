@@ -246,42 +246,42 @@ export default function CreatePage() {
 
               {/* Introduction */}
               <section>
-                <h4 className="text-xl font-bold text-gray-800 mb-3">Introduction</h4>
-                <p className="text-gray-700 leading-relaxed bg-gradient-to-r from-pink-50 to-purple-50 p-4 rounded-xl">
+                <h4 className="text-xl font-bold text-gray-100 mb-3">Introduction</h4>
+                <p className="text-gray-200 leading-relaxed bg-purple-500/10 p-4 rounded-xl border border-purple-500/20">
                   {lesson.introduction}
                 </p>
               </section>
 
               {/* Main Content */}
               <section>
-                <h4 className="text-xl font-bold text-gray-800 mb-4">Main Content</h4>
+                <h4 className="text-xl font-bold text-gray-100 mb-4">Main Content</h4>
                 <div className="space-y-4">
                   {lesson.mainContent.sections.map((section, i) => (
                     <div key={i} className="border-l-4 border-purple-400 pl-6 py-2">
-                      <h5 className="text-lg font-semibold text-purple-700 mb-2">
+                      <h5 className="text-lg font-semibold text-purple-300 mb-2">
                         {section.heading}
                       </h5>
-                      <p className="text-gray-700 leading-relaxed">{section.content}</p>
+                      <p className="text-gray-200 leading-relaxed">{section.content}</p>
                     </div>
                   ))}
                 </div>
               </section>
 
               {/* Activities */}
-              <section className="bg-gradient-to-r from-yellow-50 to-orange-50 rounded-2xl p-6">
-                <h4 className="text-xl font-bold text-gray-800 mb-4">Activities</h4>
+              <section className="bg-secondary-500/10 rounded-2xl p-6 border border-secondary-500/20">
+                <h4 className="text-xl font-bold text-gray-100 mb-4">Activities</h4>
                 <div className="space-y-4">
                   {lesson.activities.map((activity, i) => (
-                    <div key={i} className="bg-white rounded-xl p-4 shadow-sm">
+                    <div key={i} className="bg-dark-700 rounded-xl p-4 border border-secondary-500/30">
                       <div className="flex items-center justify-between mb-2">
-                        <h5 className="text-lg font-semibold text-gray-800">
+                        <h5 className="text-lg font-semibold text-gray-100">
                           {i + 1}. {activity.name}
                         </h5>
-                        <span className="text-sm font-medium text-orange-600 bg-orange-100 px-3 py-1 rounded-full">
+                        <span className="text-sm font-medium text-secondary-300 bg-secondary-500/20 px-3 py-1 rounded-full border border-secondary-500/30">
                           {activity.duration}
                         </span>
                       </div>
-                      <p className="text-gray-700">{activity.description}</p>
+                      <p className="text-gray-200">{activity.description}</p>
                     </div>
                   ))}
                 </div>
@@ -289,24 +289,24 @@ export default function CreatePage() {
 
               {/* Assessment */}
               <section>
-                <h4 className="text-xl font-bold text-gray-800 mb-4">Assessment</h4>
+                <h4 className="text-xl font-bold text-gray-100 mb-4">Assessment</h4>
                 <div className="space-y-4">
                   {lesson.assessment.map((q, i) => (
-                    <div key={i} className="bg-green-50 rounded-xl p-4 border-2 border-green-200">
-                      <p className="font-semibold text-gray-800 mb-2">
+                    <div key={i} className="bg-secondary-500/10 rounded-xl p-4 border-2 border-secondary-500/30">
+                      <p className="font-semibold text-gray-100 mb-2">
                         Question {i + 1}: {q.question}
                       </p>
-                      <p className="text-sm text-gray-600 mb-1">Type: {q.type}</p>
-                      <p className="text-green-700 font-medium">✓ {q.correctAnswer}</p>
+                      <p className="text-sm text-gray-300 mb-1">Type: {q.type}</p>
+                      <p className="text-secondary-300 font-medium">✓ {q.correctAnswer}</p>
                     </div>
                   ))}
                 </div>
               </section>
 
               {/* Closure */}
-              <section className="bg-gradient-to-r from-purple-50 to-pink-50 rounded-2xl p-6">
-                <h4 className="text-xl font-bold text-gray-800 mb-3">Lesson Closure</h4>
-                <p className="text-gray-700 leading-relaxed">{lesson.closure}</p>
+              <section className="bg-purple-500/10 rounded-2xl p-6 border border-purple-500/20">
+                <h4 className="text-xl font-bold text-gray-100 mb-3">Lesson Closure</h4>
+                <p className="text-gray-200 leading-relaxed">{lesson.closure}</p>
               </section>
 
               {/* Extensions */}
@@ -327,13 +327,13 @@ export default function CreatePage() {
 
         {!lesson && !loading && (
           <div className="text-center py-16">
-            <div className="bg-gradient-to-br from-purple-100 to-pink-100 w-24 h-24 rounded-full flex items-center justify-center mx-auto mb-6">
-              <Sparkles className="w-12 h-12 text-purple-500" />
+            <div className="bg-gradient-to-br from-purple-500/20 to-primary-500/20 w-24 h-24 rounded-full flex items-center justify-center mx-auto mb-6 border border-purple-500/30">
+              <Sparkles className="w-12 h-12 text-purple-400" />
             </div>
-            <h3 className="text-2xl font-bold text-gray-800 mb-2">
+            <h3 className="text-2xl font-bold text-gray-100 mb-2">
               Ready to Create Amazing Lessons?
             </h3>
-            <p className="text-gray-600">
+            <p className="text-gray-300">
               Enter a topic above and let AI craft a perfect lesson plan!
             </p>
           </div>

@@ -71,24 +71,24 @@ export default function PricingPage() {
 
   if (loading) {
     return (
-      <div className=\"min-h-screen bg-gradient-to-br from-purple-50 via-blue-50 to-pink-50 flex items-center justify-center\">
-        <Loader2 className=\"w-8 h-8 animate-spin text-purple-600\" />
+      <div className=\"min-h-screen bg-gradient-to-br from-dark-900 via-dark-800 to-dark-900 flex items-center justify-center\">
+        <Loader2 className=\"w-8 h-8 animate-spin text-purple-400\" />
       </div>
     )
   }
 
   return (
-    <div className=\"min-h-screen bg-gradient-to-br from-purple-50 via-blue-50 to-pink-50\">
+    <div className=\"min-h-screen bg-gradient-to-br from-dark-900 via-dark-800 to-dark-900\">
       {/* Navigation */}
-      <nav className=\"bg-white/80 backdrop-blur-md border-b border-purple-100 sticky top-0 z-50\">
+      <nav className=\"bg-dark-800/90 backdrop-blur-md border-b border-purple-500/20 sticky top-0 z-50\">
         <div className=\"max-w-7xl mx-auto px-4 sm:px-6 lg:px-8\">
           <div className=\"flex justify-between items-center h-16\">
             <Link href=\"/\" className=\"flex items-center gap-3\">
-              <div className=\"bg-gradient-to-br from-purple-500 to-pink-500 p-2 rounded-xl\">
+              <div className=\"bg-gradient-to-br from-purple-500 to-primary-500 p-2 rounded-xl\">
                 <GraduationCap className=\"w-6 h-6 text-white\" />
               </div>
               <div>
-                <h1 className=\"text-xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent\">
+                <h1 className=\"text-xl font-bold bg-gradient-to-r from-purple-400 to-primary-400 bg-clip-text text-transparent\">
                   ReviewToo
                 </h1>
               </div>
@@ -97,29 +97,29 @@ export default function PricingPage() {
               {user ? (
                 <>
                   {isProUser && (
-                    <div className=\"flex items-center gap-2 bg-gradient-to-r from-purple-100 to-pink-100 text-purple-700 px-3 py-1 rounded-full text-sm font-semibold\">
+                    <div className=\"flex items-center gap-2 bg-gradient-to-r from-purple-500/20 to-primary-500/20 text-purple-300 px-3 py-1 rounded-full text-sm font-semibold border border-purple-500/30\">
                       <Crown className=\"w-4 h-4\" />
                       Pro User
                     </div>
                   )}
-                  <Link 
+                  <Link
                     href=\"/account\"
-                    className=\"text-gray-700 hover:text-purple-600 font-medium transition-colors\"
+                    className=\"text-gray-300 hover:text-purple-400 font-medium transition-colors\"
                   >
                     Account
                   </Link>
                 </>
               ) : (
                 <>
-                  <Link 
+                  <Link
                     href=\"/login\"
-                    className=\"text-gray-700 hover:text-purple-600 font-medium transition-colors\"
+                    className=\"text-gray-300 hover:text-purple-400 font-medium transition-colors\"
                   >
                     Log In
                   </Link>
-                  <Link 
+                  <Link
                     href=\"/signup\"
-                    className=\"bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-2 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-600 transition-all transform hover:scale-105\"
+                    className=\"bg-gradient-to-r from-purple-500 to-primary-500 text-white px-6 py-2 rounded-lg font-semibold hover:from-purple-600 hover:to-primary-600 transition-all transform hover:scale-105\"
                   >
                     Sign Up
                   </Link>
@@ -133,14 +133,14 @@ export default function PricingPage() {
       {/* Hero Section */}
       <section className=\"max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16\">
         <div className=\"text-center mb-16\">
-          <h1 className=\"text-5xl font-bold text-gray-900 mb-6\">
+          <h1 className=\"text-5xl font-bold text-gray-100 mb-6\">
             Simple, Transparent Pricing
           </h1>
-          <p className=\"text-xl text-gray-600 max-w-2xl mx-auto\">
+          <p className=\"text-xl text-gray-300 max-w-2xl mx-auto\">
             Start free, upgrade when you're ready to unlock unlimited lesson planning
           </p>
           {isProUser && (
-            <div className=\"mt-6 inline-flex items-center gap-2 bg-green-100 text-green-700 px-4 py-2 rounded-full font-semibold\">
+            <div className=\"mt-6 inline-flex items-center gap-2 bg-secondary-500/20 text-secondary-300 px-4 py-2 rounded-full font-semibold border border-secondary-500/30\">
               <Check className=\"w-5 h-5\" />
               You're on the Pro plan!
             </div>
@@ -151,13 +151,13 @@ export default function PricingPage() {
         {typeof window !== 'undefined' && (
           <>
             {new URLSearchParams(window.location.search).get('success') && (
-              <div className=\"max-w-md mx-auto mb-8 p-4 bg-green-100 border border-green-300 rounded-lg text-green-700 text-center\">
+              <div className=\"max-w-md mx-auto mb-8 p-4 bg-secondary-500/20 border border-secondary-500/30 rounded-lg text-secondary-300 text-center\">
                 <Check className=\"w-6 h-6 inline-block mr-2\" />
                 Welcome to Pro! Your subscription is now active.
               </div>
             )}
             {new URLSearchParams(window.location.search).get('canceled') && (
-              <div className=\"max-w-md mx-auto mb-8 p-4 bg-yellow-100 border border-yellow-300 rounded-lg text-yellow-700 text-center\">
+              <div className=\"max-w-md mx-auto mb-8 p-4 bg-yellow-500/20 border border-yellow-500/30 rounded-lg text-yellow-300 text-center\">
                 <AlertCircle className=\"w-6 h-6 inline-block mr-2\" />
                 Payment was canceled. You can try again anytime.
               </div>
@@ -168,39 +168,39 @@ export default function PricingPage() {
         {/* Pricing Cards */}
         <div className=\"grid md:grid-cols-2 gap-8 max-w-4xl mx-auto\">
           {/* Free Plan */}
-          <div className=\"border-2 border-gray-200 rounded-3xl p-8 bg-white\">
-            <h3 className=\"text-2xl font-bold text-gray-900 mb-2\">Free</h3>
+          <div className=\"border-2 border-purple-500/30 rounded-3xl p-8 bg-dark-800\">
+            <h3 className=\"text-2xl font-bold text-gray-100 mb-2\">Free</h3>
             <div className=\"mb-6\">
-              <span className=\"text-4xl font-bold text-gray-900\">$0</span>
-              <span className=\"text-gray-600\">/month</span>
+              <span className=\"text-4xl font-bold text-gray-100\">$0</span>
+              <span className=\"text-gray-300\">/month</span>
             </div>
               <ul className="space-y-3 mb-8">
                 <li className="flex items-start gap-2">
-                  <Check className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-600">1 lesson plan total</span>
+                  <Check className="w-5 h-5 text-secondary-400 flex-shrink-0 mt-0.5" />
+                  <span className="text-gray-300">1 lesson plan total</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <Check className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-600">All grade levels (K-12)</span>
+                  <Check className="w-5 h-5 text-secondary-400 flex-shrink-0 mt-0.5" />
+                  <span className="text-gray-300">All grade levels (K-12)</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <Check className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-600">PDF export</span>
+                  <Check className="w-5 h-5 text-secondary-400 flex-shrink-0 mt-0.5" />
+                  <span className="text-gray-300">PDF export</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <Check className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-600">Save to library</span>
+                  <Check className="w-5 h-5 text-secondary-400 flex-shrink-0 mt-0.5" />
+                  <span className="text-gray-300">Save to library</span>
                 </li>
               </ul>
             {!user ? (
-              <Link 
+              <Link
                 href=\"/signup\"
-                className=\"block text-center bg-gray-100 text-gray-900 px-6 py-3 rounded-xl font-semibold hover:bg-gray-200 transition-colors\"
+                className=\"block text-center bg-purple-500/20 text-purple-300 px-6 py-3 rounded-xl font-semibold hover:bg-purple-500/30 transition-colors border border-purple-500/30\"
               >
                 Get Started Free
               </Link>
             ) : !isProUser ? (
-              <div className=\"text-center text-gray-500 font-medium py-3\">
+              <div className=\"text-center text-purple-300 font-medium py-3\">
                 Your current plan
               </div>
             ) : (
@@ -211,47 +211,47 @@ export default function PricingPage() {
           </div>
 
           {/* Pro Plan */}
-          <div className={`border-4 rounded-3xl p-8 relative overflow-hidden bg-white ${
-            isProUser ? 'border-green-500' : 'border-purple-500'
+          <div className={`border-4 rounded-3xl p-8 relative overflow-hidden bg-dark-800 ${
+            isProUser ? 'border-secondary-500' : 'border-purple-500'
           }`}>
             <div className={`absolute top-4 right-4 text-white px-3 py-1 rounded-full text-sm font-bold ${
-              isProUser 
-                ? 'bg-green-500' 
-                : 'bg-gradient-to-r from-purple-500 to-pink-500'
+              isProUser
+                ? 'bg-secondary-500'
+                : 'bg-gradient-to-r from-purple-500 to-primary-500'
             }`}>
               {isProUser ? 'Active' : 'Most Popular'}
             </div>
-            <h3 className=\"text-2xl font-bold text-gray-900 mb-2\">Pro</h3>
+            <h3 className=\"text-2xl font-bold text-gray-100 mb-2\">Pro</h3>
             <div className="mb-6">
-              <span className="text-4xl font-bold text-gray-900">$39.99</span>
-              <span className="text-gray-600">/month</span>
+              <span className="text-4xl font-bold text-gray-100">$39.99</span>
+              <span className="text-gray-300">/month</span>
             </div>
             <ul className=\"space-y-3 mb-8\">
               <li className=\"flex items-start gap-2\">
-                <Check className=\"w-5 h-5 text-purple-500 flex-shrink-0 mt-0.5\" />
-                <span className=\"text-gray-600\">Unlimited lessons</span>
+                <Check className=\"w-5 h-5 text-purple-400 flex-shrink-0 mt-0.5\" />
+                <span className=\"text-gray-300\">Unlimited lessons</span>
               </li>
               <li className=\"flex items-start gap-2\">
-                <Check className=\"w-5 h-5 text-purple-500 flex-shrink-0 mt-0.5\" />
-                <span className=\"text-gray-600\">All grade levels (K-12)</span>
+                <Check className=\"w-5 h-5 text-purple-400 flex-shrink-0 mt-0.5\" />
+                <span className=\"text-gray-300\">All grade levels (K-12)</span>
               </li>
               <li className=\"flex items-start gap-2\">
-                <Check className=\"w-5 h-5 text-purple-500 flex-shrink-0 mt-0.5\" />
-                <span className=\"text-gray-600\">Advanced customization</span>
+                <Check className=\"w-5 h-5 text-purple-400 flex-shrink-0 mt-0.5\" />
+                <span className=\"text-gray-300\">Advanced customization</span>
               </li>
               <li className=\"flex items-start gap-2\">
-                <Check className=\"w-5 h-5 text-purple-500 flex-shrink-0 mt-0.5\" />
-                <span className=\"text-gray-600\">Priority support</span>
+                <Check className=\"w-5 h-5 text-purple-400 flex-shrink-0 mt-0.5\" />
+                <span className=\"text-gray-300\">Priority support</span>
               </li>
               <li className=\"flex items-start gap-2\">
-                <Check className=\"w-5 h-5 text-purple-500 flex-shrink-0 mt-0.5\" />
-                <span className=\"text-gray-600\">Collaboration tools</span>
+                <Check className=\"w-5 h-5 text-purple-400 flex-shrink-0 mt-0.5\" />
+                <span className=\"text-gray-300\">Collaboration tools</span>
               </li>
             </ul>
             {isProUser ? (
               <Link
                 href=\"/account\"
-                className=\"block w-full text-center bg-green-100 text-green-700 px-6 py-3 rounded-xl font-semibold hover:bg-green-200 transition-colors\"
+                className=\"block w-full text-center bg-secondary-500/20 text-secondary-300 px-6 py-3 rounded-xl font-semibold hover:bg-secondary-500/30 transition-colors border border-secondary-500/30\"
               >
                 Manage Subscription
               </Link>
@@ -259,7 +259,7 @@ export default function PricingPage() {
               <button
                 onClick={handleUpgrade}
                 disabled={processingPayment}
-                className=\"block w-full text-center bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-3 rounded-xl font-semibold hover:from-purple-600 hover:to-pink-600 transition-all transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none flex items-center justify-center gap-2\"
+                className=\"block w-full text-center bg-gradient-to-r from-purple-500 to-primary-500 text-white px-6 py-3 rounded-xl font-semibold hover:from-purple-600 hover:to-primary-600 transition-all transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none flex items-center justify-center gap-2\"
               >
                 {processingPayment ? (
                   <>
