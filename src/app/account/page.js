@@ -99,46 +99,46 @@ export default function AccountPage() {
 
   if (loading) {
     return (
-      <div className=\"min-h-screen bg-gradient-to-br from-dark-900 via-dark-800 to-dark-900 flex items-center justify-center\">
-        <Loader2 className=\"w-8 h-8 animate-spin text-purple-400\" />
+      <div className="min-h-screen bg-gradient-to-br from-dark-900 via-dark-800 to-dark-900 flex items-center justify-center">
+        <Loader2 className="w-8 h-8 animate-spin text-purple-400" />
       </div>
     )
   }
 
   return (
-    <div className=\"min-h-screen bg-gradient-to-br from-dark-900 via-dark-800 to-dark-900\">
+    <div className="min-h-screen bg-gradient-to-br from-dark-900 via-dark-800 to-dark-900">
       {/* Navigation */}
-      <nav className=\"bg-dark-800/90 backdrop-blur-md border-b border-purple-500/20 sticky top-0 z-50\">
-        <div className=\"max-w-7xl mx-auto px-4 sm:px-6 lg:px-8\">
-          <div className=\"flex justify-between items-center h-16\">
-            <Link href=\"/\" className=\"flex items-center gap-3\">
-              <div className=\"bg-gradient-to-br from-purple-500 to-primary-500 p-2 rounded-xl\">
-                <GraduationCap className=\"w-6 h-6 text-white\" />
+      <nav className="bg-dark-800/90 backdrop-blur-md border-b border-purple-500/20 sticky top-0 z-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-between items-center h-16">
+            <Link href="/" className="flex items-center gap-3">
+              <div className="bg-gradient-to-br from-purple-500 to-primary-500 p-2 rounded-xl">
+                <GraduationCap className="w-6 h-6 text-white" />
               </div>
               <div>
-                <h1 className=\"text-xl font-bold bg-gradient-to-r from-purple-400 to-primary-400 bg-clip-text text-transparent\">
+                <h1 className="text-xl font-bold bg-gradient-to-r from-purple-400 to-primary-400 bg-clip-text text-transparent">
                   ReviewToo
                 </h1>
               </div>
             </Link>
-            <div className=\"flex items-center gap-4\">
+            <div className="flex items-center gap-4">
               {isProUser && (
-                <div className=\"flex items-center gap-2 bg-gradient-to-r from-purple-500/20 to-primary-500/20 text-purple-300 px-3 py-1 rounded-full text-sm font-semibold border border-purple-500/30\">
-                  <Crown className=\"w-4 h-4\" />
+                <div className="flex items-center gap-2 bg-gradient-to-r from-purple-500/20 to-primary-500/20 text-purple-300 px-3 py-1 rounded-full text-sm font-semibold border border-purple-500/30">
+                  <Crown className="w-4 h-4" />
                   Pro User
                 </div>
               )}
               <Link
-                href=\"/create\"
-                className=\"text-gray-300 hover:text-purple-400 font-medium transition-colors\"
+                href="/create"
+                className="text-gray-300 hover:text-purple-400 font-medium transition-colors"
               >
                 Create Lesson
               </Link>
               <button
                 onClick={handleSignOut}
-                className=\"flex items-center gap-2 text-gray-300 hover:text-red-400 font-medium transition-colors\"
+                className="flex items-center gap-2 text-gray-300 hover:text-red-400 font-medium transition-colors"
               >
-                <LogOut className=\"w-4 h-4\" />
+                <LogOut className="w-4 h-4" />
                 Sign Out
               </button>
             </div>

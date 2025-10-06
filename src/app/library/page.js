@@ -253,18 +253,18 @@ export default function LibraryPage() {
                   {selectedLesson.content.objectives.map((obj, i) => (
                     <li key={i} className="flex items-start gap-2 p-2 bg-purple-500/10 rounded-lg border border-purple-500/20">
                       <CheckCircle className="w-5 h-5 text-purple-400 flex-shrink-0 mt-0.5" />
-                      <span className="text-gray-700 text-sm">{obj}</span>
+                      <span className="text-gray-200 text-sm">{obj}</span>
                     </li>
                   ))}
                 </ul>
               </section>
 
-              <section className="bg-blue-50 rounded-xl p-4">
-                <h4 className="text-lg font-bold text-gray-800 mb-3">Materials</h4>
+              <section className="bg-primary-500/10 rounded-xl p-4 border border-primary-500/20">
+                <h4 className="text-lg font-bold text-gray-100 mb-3">Materials</h4>
                 <div className="grid md:grid-cols-2 gap-2">
                   {selectedLesson.content.materials.map((mat, i) => (
-                    <div key={i} className="flex items-center gap-2 text-gray-700 text-sm">
-                      <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
+                    <div key={i} className="flex items-center gap-2 text-gray-200 text-sm">
+                      <div className="w-2 h-2 bg-primary-400 rounded-full"></div>
                       {mat}
                     </div>
                   ))}
@@ -272,19 +272,19 @@ export default function LibraryPage() {
               </section>
 
               <section>
-                <h4 className="text-lg font-bold text-gray-800 mb-2">Introduction</h4>
-                <p className="text-gray-700 text-sm leading-relaxed bg-gradient-to-r from-pink-50 to-purple-50 p-4 rounded-xl">
+                <h4 className="text-lg font-bold text-gray-100 mb-2">Introduction</h4>
+                <p className="text-gray-200 text-sm leading-relaxed bg-purple-500/10 p-4 rounded-xl border border-purple-500/20">
                   {selectedLesson.content.introduction}
                 </p>
               </section>
 
               <section>
-                <h4 className="text-lg font-bold text-gray-800 mb-3">Main Content</h4>
+                <h4 className="text-lg font-bold text-gray-100 mb-3">Main Content</h4>
                 <div className="space-y-3">
                   {selectedLesson.content.mainContent.sections.map((section, i) => (
                     <div key={i} className="border-l-4 border-purple-400 pl-4 py-1">
-                      <h5 className="text-md font-semibold text-purple-700 mb-1">{section.heading}</h5>
-                      <p className="text-gray-700 text-sm leading-relaxed">{section.content}</p>
+                      <h5 className="text-md font-semibold text-purple-300 mb-1">{section.heading}</h5>
+                      <p className="text-gray-200 text-sm leading-relaxed">{section.content}</p>
                     </div>
                   ))}
                 </div>
