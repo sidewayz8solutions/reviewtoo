@@ -86,3 +86,84 @@ export async function updateLesson(lessonId, updates, userId) {
   
   return { data, error }
 }
+
+// Subscription management
+export async function createUserSubscription(userId, stripeCustomerId, subscriptionData) {
+  const { data, error } = await supabase
+    .from('user_subscriptions')
+    .insert([
+      {
+        user_id: userId,
+        stripe_customer_id: stripeCustomerId,
+        stripe_subscription_id: subscriptionData.id,
+        status: subscriptionData.status,
+        current_period_start: new Date(subscriptionData.current_period_start * 1000).toISOString(),
+        current_period_end: new Date(subscriptionData.current_period_end * 1000).toISOString(),
+        plan_name: 'pro',
+        price_id: subscriptionData.items.data[0].price.id
+      }
+    ])
+    .select()
+  
+  return { data, error }
+}
+
+export async function updateUserSubscription(userId, subscriptionData) {
+  const { data, error } = await supabase
+    .from('user_subscriptions')
+    .update({
+      status: subscriptionData.status,
+      current_period_start: new Date(subscriptionData.current_period_start * 1000).toISOString(),
+      current_period_end: new Date(subscriptionData.current_period_end * 1000).toISOString(),
+    })
+    .eq('user_id', userId)
+    .eq('stripe_subscription_id', subscriptionData.id)
+    .select()
+  
+  return { data, error }
+}
+
+export async function getUserSubscription(userId) {
+  const { data, error } = await supabase
+    .from('user_subscriptions')
+    .select('*')
+    .eq('user_id', userId)
+    .eq('status', 'active')
+    .single()
+  
+  return { data, error }
+}
+
+export async function cancelUserSubscription(userId, stripeSubscriptionId) {
+  const { data, error } = await supabase
+    .from('user_subscriptions')
+    .update({ status: 'canceled' })
+    .eq('user_id', userId)
+    .eq('stripe_subscription_id', stripeSubscriptionId)
+    .select()
+  
+  return { data, error }
+}
+
+// Usage tracking - Total lessons created (not monthly)
+export async function getUserUsage(userId) {
+  const { data, error } = await supabase
+    .from('lessons')
+    .select('id')
+    .eq('user_id', userId)
+  
+  return { count: data?.length || 0, error }
+}
+
+export async function updateUserProfile(userId, updates) {
+  const { data, error } = await supabase
+    .from('profiles')
+    .upsert({
+      id: userId,
+      ...updates,
+      updated_at: new Date().toISOString()
+    })
+    .select()
+  
+  return { data, error }
+}

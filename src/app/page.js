@@ -5,17 +5,17 @@ import { GraduationCap, Sparkles, Zap, Target, BookOpen, Users, ArrowRight, Chec
 
 export default function LandingPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 via-blue-50 to-pink-50">
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-slate-800 to-gray-900">
       {/* Navigation */}
-      <nav className="bg-white/80 backdrop-blur-md border-b border-purple-100 sticky top-0 z-50">
+      <nav className="bg-gray-800/80 backdrop-blur-md border-b border-gray-700 sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center gap-3">
-              <div className="bg-gradient-to-br from-purple-500 to-pink-500 p-2 rounded-xl">
+              <div className="bg-gradient-to-br from-teal-500 to-cyan-600 p-2 rounded-xl">
                 <GraduationCap className="w-6 h-6 text-white" />
               </div>
               <div>
-                <h1 className="text-xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
+                <h1 className="text-xl font-bold bg-gradient-to-r from-teal-400 to-cyan-400 bg-clip-text text-transparent">
                   LearnCraft AI
                 </h1>
               </div>
@@ -23,13 +23,13 @@ export default function LandingPage() {
             <div className="flex items-center gap-4">
               <Link 
                 href="/login"
-                className="text-gray-700 hover:text-purple-600 font-medium transition-colors"
+                className="text-gray-300 hover:text-teal-400 font-medium transition-colors"
               >
                 Log In
               </Link>
               <Link 
                 href="/signup"
-                className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-2 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-600 transition-all transform hover:scale-105"
+                className="bg-gradient-to-r from-teal-500 to-cyan-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-teal-600 hover:to-cyan-700 transition-all transform hover:scale-105"
               >
                 Get Started
               </Link>
@@ -41,30 +41,30 @@ export default function LandingPage() {
       {/* Hero Section */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="text-center mb-16 animate-fadeIn">
-          <div className="inline-flex items-center gap-2 bg-purple-100 text-purple-700 px-4 py-2 rounded-full mb-6 font-semibold text-sm">
+          <div className="inline-flex items-center gap-2 bg-teal-500/20 text-teal-400 px-4 py-2 rounded-full mb-6 font-semibold text-sm border border-teal-500/30">
             <Sparkles className="w-4 h-4" />
             AI-Powered Education
           </div>
-          <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
+          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
             Where Every Lesson
-            <span className="block bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
+            <span className="block bg-gradient-to-r from-teal-400 to-cyan-400 bg-clip-text text-transparent">
               Comes Alive
             </span>
           </h1>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-10">
+          <p className="text-xl text-gray-300 max-w-2xl mx-auto mb-10">
             Create comprehensive, engaging lesson plans in seconds. Powered by advanced AI to help teachers focus on what matters most - their students.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
               href="/signup"
-              className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-4 rounded-xl font-bold text-lg hover:from-purple-600 hover:to-pink-600 transition-all transform hover:scale-105 flex items-center justify-center gap-2 shadow-lg"
+              className="bg-gradient-to-r from-teal-500 to-cyan-600 text-white px-8 py-4 rounded-xl font-bold text-lg hover:from-teal-600 hover:to-cyan-700 transition-all transform hover:scale-105 flex items-center justify-center gap-2 shadow-lg shadow-teal-500/25"
             >
               Start Creating Free
               <ArrowRight className="w-5 h-5" />
             </Link>
             <Link 
               href="/create"
-              className="bg-white text-purple-600 border-2 border-purple-200 px-8 py-4 rounded-xl font-bold text-lg hover:border-purple-400 transition-all flex items-center justify-center gap-2"
+              className="bg-gray-700 text-teal-400 border-2 border-teal-500/50 px-8 py-4 rounded-xl font-bold text-lg hover:border-teal-400 hover:bg-gray-600 transition-all flex items-center justify-center gap-2"
             >
               See Demo
               <Sparkles className="w-5 h-5" />
@@ -188,7 +188,7 @@ export default function LandingPage() {
               <ul className="space-y-3 mb-8">
                 <li className="flex items-start gap-2">
                   <Check className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-600">5 lessons per month</span>
+                  <span className="text-gray-600">1 lesson plan total</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <Check className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
@@ -213,11 +213,11 @@ export default function LandingPage() {
 
             <div className="border-4 border-purple-500 rounded-3xl p-8 relative overflow-hidden">
               <div className="absolute top-4 right-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white px-3 py-1 rounded-full text-sm font-bold">
-                Coming Soon
+                Most Popular
               </div>
               <h3 className="text-2xl font-bold text-gray-900 mb-2">Pro</h3>
               <div className="mb-6">
-                <span className="text-4xl font-bold text-gray-900">$19</span>
+                <span className="text-4xl font-bold text-gray-900">$39.99</span>
                 <span className="text-gray-600">/month</span>
               </div>
               <ul className="space-y-3 mb-8">
@@ -242,12 +242,12 @@ export default function LandingPage() {
                   <span className="text-gray-600">Collaboration tools</span>
                 </li>
               </ul>
-              <button 
-                disabled
-                className="block w-full text-center bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-3 rounded-xl font-semibold opacity-50 cursor-not-allowed"
+              <Link
+                href="/pricing"
+                className="block w-full text-center bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-3 rounded-xl font-semibold hover:from-purple-600 hover:to-pink-600 transition-all transform hover:scale-105"
               >
-                Coming Soon
-              </button>
+                Start Pro Trial
+              </Link>
             </div>
           </div>
         </div>
