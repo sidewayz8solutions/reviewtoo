@@ -23,7 +23,7 @@ export async function POST(request) {
     }
 
     // Create the lesson generation prompt
-    const systemPrompt = `You are an expert K-5 educator. Create a comprehensive, engaging lesson plan that is age-appropriate for ${gradeLevel} students in the subject of ${subject}.
+    const systemPrompt = `You are an expert K-12 educator. Create a comprehensive, engaging lesson plan that is age-appropriate for ${gradeLevel} students in the subject of ${subject}.
 
 The lesson plan should include:
 1. A clear title and duration

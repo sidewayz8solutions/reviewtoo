@@ -89,7 +89,7 @@ export default function PricingPage() {
               </div>
               <div>
                 <h1 className=\"text-xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent\">
-                  LearnCraft AI
+                  ReviewToo
                 </h1>
               </div>
             </Link>
@@ -181,7 +181,7 @@ export default function PricingPage() {
                 </li>
                 <li className="flex items-start gap-2">
                   <Check className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-600">All grade levels (K-5)</span>
+                  <span className="text-gray-600">All grade levels (K-12)</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <Check className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
@@ -293,7 +293,7 @@ export default function PricingPage() {
                 Is there a free trial for the Pro plan?
               </h3>
               <p className="text-gray-600">
-                While we don't offer a traditional free trial, our free plan gives you 1 lesson plan to try out LearnCraft AI. You can upgrade to Pro whenever you're ready for unlimited lessons.
+                While we don't offer a traditional free trial, our free plan gives you 1 lesson plan to try out ReviewToo. You can upgrade to Pro whenever you're ready for unlimited lessons.
               </p>
             </div>
             <div className=\"bg-white rounded-2xl p-6 shadow-sm\">

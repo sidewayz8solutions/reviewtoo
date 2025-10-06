@@ -17,7 +17,7 @@ export default function CreatePage() {
   const [error, setError] = useState('')
   const [saving, setSaving] = useState(false)
 
-  const gradeLevels = ['Kindergarten', '1st Grade', '2nd Grade', '3rd Grade', '4th Grade', '5th Grade']
+  const gradeLevels = ['Kindergarten', '1st Grade', '2nd Grade', '3rd Grade', '4th Grade', '5th Grade', '6th Grade', '7th Grade', '8th Grade', '9th Grade', '10th Grade', '11th Grade', '12th Grade']
   const subjects = ['Math', 'Science', 'Reading', 'Writing', 'Social Studies', 'Art']
 
   useEffect(() => {
@@ -96,24 +96,24 @@ export default function CreatePage() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 via-blue-50 to-pink-50">
+    <div className="min-h-screen bg-gradient-to-br from-dark-900 via-dark-800 to-dark-900">
       <div className="max-w-7xl mx-auto px-4 py-8">
         {/* Input Section */}
-        <div className="bg-white rounded-3xl shadow-xl p-8 mb-8 border-2 border-purple-100">
+        <div className="bg-dark-800 rounded-3xl shadow-xl p-8 mb-8 border-2 border-purple-500/30">
           <div className="flex items-center gap-2 mb-6">
-            <Sparkles className="w-6 h-6 text-purple-500" />
-            <h2 className="text-2xl font-bold text-gray-800">Create Your Lesson</h2>
+            <Sparkles className="w-6 h-6 text-purple-400" />
+            <h2 className="text-2xl font-bold text-gray-100">Create Your Lesson</h2>
           </div>
 
           <div className="grid md:grid-cols-2 gap-6 mb-6">
             <div>
-              <label className="block text-sm font-semibold text-gray-700 mb-2">
+              <label className="block text-sm font-semibold text-gray-300 mb-2">
                 Grade Level
               </label>
               <select
                 value={gradeLevel}
                 onChange={(e) => setGradeLevel(e.target.value)}
-                className="w-full px-4 py-3 border-2 border-purple-200 rounded-xl focus:border-purple-500 focus:outline-none transition-colors"
+                className="w-full px-4 py-3 border-2 border-gray-600 bg-dark-700 text-gray-100 rounded-xl focus:border-purple-500 focus:outline-none transition-colors"
               >
                 {gradeLevels.map(level => (
                   <option key={level} value={level}>{level}</option>
@@ -122,13 +122,13 @@ export default function CreatePage() {
             </div>
 
             <div>
-              <label className="block text-sm font-semibold text-gray-700 mb-2">
+              <label className="block text-sm font-semibold text-gray-300 mb-2">
                 Subject
               </label>
               <select
                 value={subject}
                 onChange={(e) => setSubject(e.target.value)}
-                className="w-full px-4 py-3 border-2 border-purple-200 rounded-xl focus:border-purple-500 focus:outline-none transition-colors"
+                className="w-full px-4 py-3 border-2 border-gray-600 bg-dark-700 text-gray-100 rounded-xl focus:border-purple-500 focus:outline-none transition-colors"
               >
                 {subjects.map(subj => (
                   <option key={subj} value={subj}>{subj}</option>
@@ -138,20 +138,20 @@ export default function CreatePage() {
           </div>
 
           <div className="mb-6">
-            <label className="block text-sm font-semibold text-gray-700 mb-2">
+            <label className="block text-sm font-semibold text-gray-300 mb-2">
               Lesson Topic
             </label>
             <textarea
               value={prompt}
               onChange={(e) => setPrompt(e.target.value)}
               placeholder="E.g., 'Teach addition with pictures and objects' or 'Introduce the water cycle with fun experiments'"
-              className="w-full px-4 py-3 border-2 border-purple-200 rounded-xl focus:border-purple-500 focus:outline-none transition-colors resize-none"
+              className="w-full px-4 py-3 border-2 border-gray-600 bg-dark-700 text-gray-100 rounded-xl focus:border-purple-500 focus:outline-none transition-colors resize-none placeholder-gray-400"
               rows="3"
             />
           </div>
 
           {error && (
-            <div className="mb-4 p-4 bg-red-50 border-2 border-red-200 rounded-xl text-red-700">
+            <div className="mb-4 p-4 bg-red-500/10 border-2 border-red-500/30 rounded-xl text-red-300">
               {error}
             </div>
           )}
@@ -159,7 +159,7 @@ export default function CreatePage() {
           <button
             onClick={generateLesson}
             disabled={loading}
-            className="w-full bg-gradient-to-r from-purple-500 to-pink-500 text-white py-4 rounded-xl font-semibold text-lg hover:from-purple-600 hover:to-pink-600 transition-all transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100 flex items-center justify-center gap-2 shadow-lg"
+            className="w-full bg-gradient-to-r from-purple-500 to-primary-500 text-white py-4 rounded-xl font-semibold text-lg hover:from-purple-600 hover:to-primary-600 transition-all transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100 flex items-center justify-center gap-2 shadow-lg"
           >
             {loading ? (
               <>
@@ -177,8 +177,8 @@ export default function CreatePage() {
 
         {/* Lesson Display */}
         {lesson && (
-          <div className="bg-white rounded-3xl shadow-xl overflow-hidden border-2 border-purple-100 animate-fadeIn">
-            <div className="bg-gradient-to-r from-purple-500 to-pink-500 p-8 text-white">
+          <div className="bg-dark-800 rounded-3xl shadow-xl overflow-hidden border-2 border-purple-500/30 animate-fadeIn">
+            <div className="bg-gradient-to-r from-purple-500 to-primary-500 p-8 text-white">
               <div className="flex items-start justify-between">
                 <div className="flex-1">
                   <div className="flex items-center gap-2 mb-2">
@@ -218,26 +218,26 @@ export default function CreatePage() {
               {/* Learning Objectives */}
               <section>
                 <div className="flex items-center gap-2 mb-4">
-                  <Target className="w-6 h-6 text-purple-500" />
-                  <h4 className="text-xl font-bold text-gray-800">Learning Objectives</h4>
+                  <Target className="w-6 h-6 text-purple-400" />
+                  <h4 className="text-xl font-bold text-gray-100">Learning Objectives</h4>
                 </div>
                 <ul className="space-y-2">
                   {lesson.objectives.map((obj, i) => (
-                    <li key={i} className="flex items-start gap-3 p-3 bg-purple-50 rounded-xl">
-                      <CheckCircle className="w-5 h-5 text-purple-500 flex-shrink-0 mt-0.5" />
-                      <span className="text-gray-700">{obj}</span>
+                    <li key={i} className="flex items-start gap-3 p-3 bg-purple-500/10 rounded-xl border border-purple-500/20">
+                      <CheckCircle className="w-5 h-5 text-purple-400 flex-shrink-0 mt-0.5" />
+                      <span className="text-gray-300">{obj}</span>
                     </li>
                   ))}
                 </ul>
               </section>
 
               {/* Materials */}
-              <section className="bg-blue-50 rounded-2xl p-6">
-                <h4 className="text-xl font-bold text-gray-800 mb-4">Materials Needed</h4>
+              <section className="bg-primary-500/10 rounded-2xl p-6 border border-primary-500/20">
+                <h4 className="text-xl font-bold text-gray-100 mb-4">Materials Needed</h4>
                 <div className="grid md:grid-cols-2 gap-3">
                   {lesson.materials.map((mat, i) => (
-                    <div key={i} className="flex items-center gap-2 text-gray-700">
-                      <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
+                    <div key={i} className="flex items-center gap-2 text-gray-300">
+                      <div className="w-2 h-2 bg-primary-400 rounded-full"></div>
                       {mat}
                     </div>
                   ))}

@@ -1,6 +1,6 @@
 # Stripe Payment Integration Setup Guide
 
-This guide will help you set up Stripe payments for your LearnCraft AI application.
+This guide will help you set up Stripe payments for your ReviewToo application.
 
 ## Prerequisites
 
@@ -22,7 +22,7 @@ This guide will help you set up Stripe payments for your LearnCraft AI applicati
 3. **Create a Product and Price**
    - Go to `Products` in your Stripe Dashboard
    - Click `Add Product`
-   - Name: "LearnCraft AI Pro"
+   - Name: "ReviewToo Pro"
    - Description: "Unlimited AI-powered lesson plans"
    - Set up pricing: $39.99/month recurring
    - Copy the `Price ID` (starts with `price_`)
@@ -125,7 +125,7 @@ STRIPE_WEBHOOK_SECRET=whsec_your_webhook_secret_here
 
 ### Free Plan (Default)
 - 1 lesson plan total
-- All grade levels (K-5)
+- All grade levels (K-12)
 - PDF export
 - Save to library
 

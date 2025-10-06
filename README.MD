@@ -1,8 +1,8 @@
-# LearnCraft AI 🎓✨
+# ReviewToo 🎓✨
 
-**Where Every Lesson Comes Alive**
+**AI-Powered K-12 Lesson Planning**
 
-An AI-powered education platform that generates comprehensive, engaging lesson plans for K-5 educators in seconds.
+An AI-powered education platform that generates comprehensive, engaging lesson plans for K-12 educators in seconds.
 
 ## Features
 
@@ -12,7 +12,7 @@ An AI-powered education platform that generates comprehensive, engaging lesson p
 - 💾 **Save & Organize**: Personal library to store and manage all your lessons
 - 🎨 **Modern UI**: Beautiful, responsive design with smooth animations
 - 🔐 **User Authentication**: Secure login with Supabase
-- 🎯 **Grade-Specific**: Tailored content for Kindergarten through 5th grade
+- 🎯 **Grade-Specific**: Tailored content for Kindergarten through 12th grade
 
 ## Tech Stack
 
@@ -203,12 +203,14 @@ learncraft-ai/
 ## Usage Limits
 
 **Free Tier:**
-- 5 lessons per month
-- K-5 grade levels
+
+- 1 lesson total
+- K-12 grade levels
 - PDF export
 - Save to library
 
 **Pro Tier (Coming Soon):**
+
 - Unlimited lessons
 - K-12 grade levels
 - Advanced customization

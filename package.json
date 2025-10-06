@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@genkit-ai/mcp": "^1.20.0",
     "@stripe/stripe-js": "^8.0.0",
     "@supabase/supabase-js": "^2.39.3",
     "dotenv": "^17.2.3",

@@ -16,7 +16,7 @@ export default function LandingPage() {
               </div>
               <div>
                 <h1 className="text-xl font-bold bg-gradient-to-r from-teal-400 to-cyan-400 bg-clip-text text-transparent">
-                  LearnCraft AI
+                  ReviewToo
                 </h1>
               </div>
             </div>
@@ -73,14 +73,14 @@ export default function LandingPage() {
         </div>
 
         {/* Demo Preview */}
-        <div className="bg-white rounded-3xl shadow-2xl p-4 border-4 border-purple-200 animate-slideUp">
-          <div className="bg-gradient-to-br from-purple-100 to-pink-100 rounded-2xl p-8 flex items-center justify-center min-h-[400px]">
+        <div className="bg-dark-800 rounded-3xl shadow-2xl p-4 border-4 border-primary-500/30 animate-slideUp">
+          <div className="bg-gradient-to-br from-dark-700 to-dark-600 rounded-2xl p-8 flex items-center justify-center min-h-[400px]">
             <div className="text-center">
-              <div className="bg-white p-6 rounded-2xl shadow-lg inline-block mb-4">
-                <BookOpen className="w-16 h-16 text-purple-500" />
+              <div className="bg-dark-800 p-6 rounded-2xl shadow-lg inline-block mb-4 border border-primary-500/20">
+                <BookOpen className="w-16 h-16 text-primary-400" />
               </div>
-              <h3 className="text-2xl font-bold text-gray-800 mb-2">Beautiful Lesson Plans</h3>
-              <p className="text-gray-600">Complete with objectives, activities, and assessments</p>
+              <h3 className="text-2xl font-bold text-gray-100 mb-2">Beautiful Lesson Plans</h3>
+              <p className="text-gray-300">Complete with objectives, activities, and assessments</p>
             </div>
           </div>
         </div>
@@ -99,68 +99,68 @@ export default function LandingPage() {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="p-8 rounded-2xl bg-gradient-to-br from-purple-50 to-purple-100 border-2 border-purple-200 hover:shadow-xl transition-shadow">
-              <div className="bg-purple-500 w-12 h-12 rounded-xl flex items-center justify-center mb-4">
+            <div className="p-8 rounded-2xl bg-gradient-to-br from-dark-800 to-dark-700 border-2 border-primary-500/30 hover:shadow-xl hover:border-primary-400/50 transition-all">
+              <div className="bg-primary-500 w-12 h-12 rounded-xl flex items-center justify-center mb-4">
                 <Zap className="w-6 h-6 text-white" />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Lightning Fast</h3>
-              <p className="text-gray-600">Generate complete lesson plans in under 30 seconds. Save hours of planning time every week.</p>
+              <h3 className="text-xl font-bold text-gray-100 mb-2">Lightning Fast</h3>
+              <p className="text-gray-300">Generate complete lesson plans in under 30 seconds. Save hours of planning time every week.</p>
             </div>
 
-            <div className="p-8 rounded-2xl bg-gradient-to-br from-pink-50 to-pink-100 border-2 border-pink-200 hover:shadow-xl transition-shadow">
-              <div className="bg-pink-500 w-12 h-12 rounded-xl flex items-center justify-center mb-4">
+            <div className="p-8 rounded-2xl bg-gradient-to-br from-dark-800 to-dark-700 border-2 border-purple-500/30 hover:shadow-xl hover:border-purple-400/50 transition-all">
+              <div className="bg-purple-500 w-12 h-12 rounded-xl flex items-center justify-center mb-4">
                 <Target className="w-6 h-6 text-white" />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Standards Aligned</h3>
-              <p className="text-gray-600">Every lesson is crafted with educational best practices and learning objectives in mind.</p>
+              <h3 className="text-xl font-bold text-gray-100 mb-2">Standards Aligned</h3>
+              <p className="text-gray-300">Every lesson is crafted with educational best practices and learning objectives in mind.</p>
             </div>
 
-            <div className="p-8 rounded-2xl bg-gradient-to-br from-blue-50 to-blue-100 border-2 border-blue-200 hover:shadow-xl transition-shadow">
+            <div className="p-8 rounded-2xl bg-gradient-to-br from-dark-800 to-dark-700 border-2 border-blue-500/30 hover:shadow-xl hover:border-blue-400/50 transition-all">
               <div className="bg-blue-500 w-12 h-12 rounded-xl flex items-center justify-center mb-4">
                 <Users className="w-6 h-6 text-white" />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Age Appropriate</h3>
-              <p className="text-gray-600">Content tailored for every grade level from Kindergarten through 5th grade and beyond.</p>
+              <h3 className="text-xl font-bold text-gray-100 mb-2">Age Appropriate</h3>
+              <p className="text-gray-300">Content tailored for every grade level from Kindergarten through 5th grade and beyond.</p>
             </div>
           </div>
         </div>
       </section>
 
       {/* How It Works */}
-      <section className="py-20 bg-gradient-to-br from-purple-50 to-pink-50">
+      <section className="py-20 bg-gradient-to-br from-dark-800 to-dark-700">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-4xl font-bold text-gray-100 mb-4">
               Three Steps to Perfect Lessons
             </h2>
-            <p className="text-xl text-gray-600">
+            <p className="text-xl text-gray-300">
               It's as easy as 1-2-3
             </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-12">
             <div className="text-center">
-              <div className="bg-gradient-to-br from-purple-500 to-pink-500 text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6 shadow-lg">
+              <div className="bg-gradient-to-br from-primary-500 to-primary-600 text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6 shadow-lg">
                 1
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Enter Your Topic</h3>
-              <p className="text-gray-600">Choose grade level, subject, and describe what you want to teach</p>
+              <h3 className="text-xl font-bold text-gray-100 mb-2">Enter Your Topic</h3>
+              <p className="text-gray-300">Choose grade level, subject, and describe what you want to teach</p>
             </div>
 
             <div className="text-center">
-              <div className="bg-gradient-to-br from-purple-500 to-pink-500 text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6 shadow-lg">
+              <div className="bg-gradient-to-br from-purple-500 to-purple-600 text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6 shadow-lg">
                 2
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">AI Generates Plan</h3>
-              <p className="text-gray-600">Watch as comprehensive lesson materials are created instantly</p>
+              <h3 className="text-xl font-bold text-gray-100 mb-2">AI Generates Plan</h3>
+              <p className="text-gray-300">Watch as comprehensive lesson materials are created instantly</p>
             </div>
 
             <div className="text-center">
-              <div className="bg-gradient-to-br from-purple-500 to-pink-500 text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6 shadow-lg">
+              <div className="bg-gradient-to-br from-primary-500 to-purple-500 text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6 shadow-lg">
                 3
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Teach & Save</h3>
-              <p className="text-gray-600">Download as PDF, save to your library, and start teaching</p>
+              <h3 className="text-xl font-bold text-gray-100 mb-2">Teach & Save</h3>
+              <p className="text-gray-300">Download as PDF, save to your library, and start teaching</p>
             </div>
           </div>
         </div>
@@ -192,7 +192,7 @@ export default function LandingPage() {
                 </li>
                 <li className="flex items-start gap-2">
                   <Check className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-600">All grade levels (K-5)</span>
+                  <span className="text-gray-600">All grade levels (K-12)</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <Check className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
@@ -211,40 +211,40 @@ export default function LandingPage() {
               </Link>
             </div>
 
-            <div className="border-4 border-purple-500 rounded-3xl p-8 relative overflow-hidden">
-              <div className="absolute top-4 right-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white px-3 py-1 rounded-full text-sm font-bold">
+            <div className="border-4 border-purple-500 rounded-3xl p-8 relative overflow-hidden bg-dark-800">
+              <div className="absolute top-4 right-4 bg-gradient-to-r from-purple-500 to-primary-500 text-white px-3 py-1 rounded-full text-sm font-bold">
                 Most Popular
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-2">Pro</h3>
+              <h3 className="text-2xl font-bold text-gray-100 mb-2">Pro</h3>
               <div className="mb-6">
-                <span className="text-4xl font-bold text-gray-900">$39.99</span>
-                <span className="text-gray-600">/month</span>
+                <span className="text-4xl font-bold text-gray-100">$39.99</span>
+                <span className="text-gray-300">/month</span>
               </div>
               <ul className="space-y-3 mb-8">
                 <li className="flex items-start gap-2">
-                  <Check className="w-5 h-5 text-purple-500 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-600">Unlimited lessons</span>
+                  <Check className="w-5 h-5 text-purple-400 flex-shrink-0 mt-0.5" />
+                  <span className="text-gray-300">Unlimited lessons</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <Check className="w-5 h-5 text-purple-500 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-600">All grade levels (K-12)</span>
+                  <Check className="w-5 h-5 text-purple-400 flex-shrink-0 mt-0.5" />
+                  <span className="text-gray-300">All grade levels (K-12)</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <Check className="w-5 h-5 text-purple-500 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-600">Advanced customization</span>
+                  <Check className="w-5 h-5 text-purple-400 flex-shrink-0 mt-0.5" />
+                  <span className="text-gray-300">Advanced customization</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <Check className="w-5 h-5 text-purple-500 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-600">Priority support</span>
+                  <Check className="w-5 h-5 text-purple-400 flex-shrink-0 mt-0.5" />
+                  <span className="text-gray-300">Priority support</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <Check className="w-5 h-5 text-purple-500 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-600">Collaboration tools</span>
+                  <Check className="w-5 h-5 text-purple-400 flex-shrink-0 mt-0.5" />
+                  <span className="text-gray-300">Collaboration tools</span>
                 </li>
               </ul>
               <Link
                 href="/pricing"
-                className="block w-full text-center bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-3 rounded-xl font-semibold hover:from-purple-600 hover:to-pink-600 transition-all transform hover:scale-105"
+                className="block w-full text-center bg-gradient-to-r from-purple-500 to-primary-500 text-white px-6 py-3 rounded-xl font-semibold hover:from-purple-600 hover:to-primary-600 transition-all transform hover:scale-105"
               >
                 Start Pro Trial
               </Link>
@@ -254,7 +254,7 @@ export default function LandingPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 bg-gradient-to-r from-purple-600 to-pink-600">
+      <section className="py-20 bg-gradient-to-r from-purple-600 to-primary-600">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-bold text-white mb-6">
             Ready to Transform Your Teaching?
@@ -262,7 +262,7 @@ export default function LandingPage() {
           <p className="text-xl text-purple-100 mb-8">
             Join thousands of educators creating better lessons with AI
           </p>
-          <Link 
+          <Link
             href="/signup"
             className="inline-flex items-center gap-2 bg-white text-purple-600 px-8 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all transform hover:scale-105"
           >
@@ -277,16 +277,16 @@ export default function LandingPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="flex items-center gap-3 mb-4 md:mb-0">
-              <div className="bg-gradient-to-br from-purple-500 to-pink-500 p-2 rounded-xl">
+              <div className="bg-gradient-to-br from-purple-500 to-primary-500 p-2 rounded-xl">
                 <GraduationCap className="w-5 h-5 text-white" />
               </div>
               <div>
-                <div className="font-bold">LearnCraft AI</div>
-                <div className="text-sm text-gray-400">Where Every Lesson Comes Alive</div>
+                <div className="font-bold">ReviewToo</div>
+                <div className="text-sm text-gray-400">AI-Powered K-12 Lesson Planning</div>
               </div>
             </div>
             <div className="text-gray-400 text-sm">
-              © 2025 LearnCraft AI. All rights reserved.
+              © 2025 ReviewToo. All rights reserved.
             </div>
           </div>
         </div>

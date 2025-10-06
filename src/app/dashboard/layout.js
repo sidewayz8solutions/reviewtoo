@@ -37,18 +37,18 @@ export default function DashboardLayout({ children }) {
   ]
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 via-blue-50 to-pink-50">
+    <div className="min-h-screen bg-gradient-to-br from-dark-900 via-dark-800 to-dark-900">
       {/* Top Navigation */}
-      <nav className="bg-white/80 backdrop-blur-md border-b border-purple-100 sticky top-0 z-40">
+      <nav className="bg-dark-800/90 backdrop-blur-md border-b border-purple-500/20 sticky top-0 z-40">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <Link href="/dashboard" className="flex items-center gap-3">
-              <div className="bg-gradient-to-br from-purple-500 to-pink-500 p-2 rounded-xl">
+              <div className="bg-gradient-to-br from-purple-500 to-primary-500 p-2 rounded-xl">
                 <GraduationCap className="w-6 h-6 text-white" />
               </div>
               <div>
-                <h1 className="text-xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
-                  LearnCraft AI
+                <h1 className="text-xl font-bold bg-gradient-to-r from-purple-400 to-primary-400 bg-clip-text text-transparent">
+                  ReviewToo
                 </h1>
               </div>
             </Link>
@@ -64,8 +64,8 @@ export default function DashboardLayout({ children }) {
                     href={item.href}
                     className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-colors ${
                       isActive
-                        ? 'bg-gradient-to-r from-purple-100 to-pink-100 text-purple-700'
-                        : 'text-gray-700 hover:text-purple-600 hover:bg-purple-50'
+                        ? 'bg-gradient-to-r from-purple-500/20 to-primary-500/20 text-purple-300 border border-purple-500/30'
+                        : 'text-gray-300 hover:text-purple-400 hover:bg-purple-500/10'
                     }`}
                   >
                     <Icon className="w-5 h-5" />
@@ -75,7 +75,7 @@ export default function DashboardLayout({ children }) {
               })}
               <button
                 onClick={handleSignOut}
-                className="flex items-center gap-2 px-4 py-2 rounded-lg font-medium text-gray-700 hover:text-red-600 hover:bg-red-50 transition-colors"
+                className="flex items-center gap-2 px-4 py-2 rounded-lg font-medium text-gray-300 hover:text-red-400 hover:bg-red-500/10 transition-colors"
               >
                 <LogOut className="w-5 h-5" />
                 Sign Out
@@ -85,12 +85,12 @@ export default function DashboardLayout({ children }) {
             {/* Mobile Menu Button */}
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="md:hidden p-2 rounded-lg hover:bg-purple-50 transition-colors"
+              className="md:hidden p-2 rounded-lg hover:bg-purple-500/10 transition-colors"
             >
               {mobileMenuOpen ? (
-                <X className="w-6 h-6 text-gray-700" />
+                <X className="w-6 h-6 text-gray-300" />
               ) : (
-                <Menu className="w-6 h-6 text-gray-700" />
+                <Menu className="w-6 h-6 text-gray-300" />
               )}
             </button>
           </div>
@@ -98,7 +98,7 @@ export default function DashboardLayout({ children }) {
 
         {/* Mobile Navigation */}
         {mobileMenuOpen && (
-          <div className="md:hidden border-t border-purple-100 bg-white">
+          <div className="md:hidden border-t border-purple-500/20 bg-dark-800">
             <div className="px-4 py-4 space-y-2">
               {navigation.map((item) => {
                 const Icon = item.icon
@@ -110,8 +110,8 @@ export default function DashboardLayout({ children }) {
                     onClick={() => setMobileMenuOpen(false)}
                     className={`flex items-center gap-2 px-4 py-3 rounded-lg font-medium transition-colors ${
                       isActive
-                        ? 'bg-gradient-to-r from-purple-100 to-pink-100 text-purple-700'
-                        : 'text-gray-700 hover:text-purple-600 hover:bg-purple-50'
+                        ? 'bg-gradient-to-r from-purple-500/20 to-primary-500/20 text-purple-300 border border-purple-500/30'
+                        : 'text-gray-300 hover:text-purple-400 hover:bg-purple-500/10'
                     }`}
                   >
                     <Icon className="w-5 h-5" />
@@ -124,7 +124,7 @@ export default function DashboardLayout({ children }) {
                   handleSignOut()
                   setMobileMenuOpen(false)
                 }}
-                className="w-full flex items-center gap-2 px-4 py-3 rounded-lg font-medium text-gray-700 hover:text-red-600 hover:bg-red-50 transition-colors"
+                className="w-full flex items-center gap-2 px-4 py-3 rounded-lg font-medium text-gray-300 hover:text-red-400 hover:bg-red-500/10 transition-colors"
               >
                 <LogOut className="w-5 h-5" />
                 Sign Out

@@ -44,28 +44,28 @@ export default function DashboardPage() {
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-purple-50 via-blue-50 to-pink-50 flex items-center justify-center">
-        <Loader className="w-12 h-12 text-purple-500 animate-spin" />
+      <div className="min-h-screen bg-gradient-to-br from-dark-900 via-dark-800 to-dark-900 flex items-center justify-center">
+        <Loader className="w-12 h-12 text-purple-400 animate-spin" />
       </div>
     )
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 via-blue-50 to-pink-50">
+    <div className="min-h-screen bg-gradient-to-br from-dark-900 via-dark-800 to-dark-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Header */}
         <div className="mb-8">
-          <h1 className="text-4xl font-bold text-gray-900 mb-2">
+          <h1 className="text-4xl font-bold text-gray-100 mb-2">
             Welcome back, {user?.user_metadata?.full_name || 'Teacher'}!
           </h1>
-          <p className="text-gray-600 text-lg">Ready to create more amazing lessons?</p>
+          <p className="text-gray-300 text-lg">Ready to create more amazing lessons?</p>
         </div>
 
         {/* Quick Actions */}
         <div className="grid md:grid-cols-2 gap-6 mb-12">
-          <Link 
+          <Link
             href="/create"
-            className="bg-gradient-to-r from-purple-500 to-pink-500 text-white p-8 rounded-3xl shadow-xl hover:shadow-2xl transition-all transform hover:scale-105 flex items-center gap-4"
+            className="bg-gradient-to-r from-purple-500 to-primary-500 text-white p-8 rounded-3xl shadow-xl hover:shadow-2xl transition-all transform hover:scale-105 flex items-center gap-4"
           >
             <div className="bg-white/20 p-4 rounded-2xl">
               <Sparkles className="w-8 h-8" />
@@ -76,28 +76,28 @@ export default function DashboardPage() {
             </div>
           </Link>
 
-          <Link 
+          <Link
             href="/library"
-            className="bg-white p-8 rounded-3xl shadow-xl hover:shadow-2xl transition-all transform hover:scale-105 flex items-center gap-4 border-2 border-purple-100"
+            className="bg-dark-800 p-8 rounded-3xl shadow-xl hover:shadow-2xl transition-all transform hover:scale-105 flex items-center gap-4 border-2 border-primary-500/30"
           >
-            <div className="bg-gradient-to-br from-purple-100 to-pink-100 p-4 rounded-2xl">
-              <BookOpen className="w-8 h-8 text-purple-600" />
+            <div className="bg-gradient-to-br from-primary-500/20 to-purple-500/20 p-4 rounded-2xl border border-primary-500/30">
+              <BookOpen className="w-8 h-8 text-primary-400" />
             </div>
             <div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-1">My Library</h3>
-              <p className="text-gray-600">Browse all your saved lessons</p>
+              <h3 className="text-2xl font-bold text-gray-100 mb-1">My Library</h3>
+              <p className="text-gray-300">Browse all your saved lessons</p>
             </div>
           </Link>
         </div>
 
         {/* Recent Lessons */}
-        <div className="bg-white rounded-3xl shadow-xl p-8 border-2 border-purple-100">
+        <div className="bg-dark-800 rounded-3xl shadow-xl p-8 border-2 border-purple-500/30">
           <div className="flex items-center justify-between mb-6">
-            <h2 className="text-2xl font-bold text-gray-900">Recent Lessons</h2>
+            <h2 className="text-2xl font-bold text-gray-100">Recent Lessons</h2>
             {lessons.length > 0 && (
-              <Link 
+              <Link
                 href="/library"
-                className="text-purple-600 hover:text-purple-700 font-semibold"
+                className="text-purple-400 hover:text-purple-300 font-semibold"
               >
                 View All →
               </Link>
@@ -106,14 +106,14 @@ export default function DashboardPage() {
 
           {lessons.length === 0 ? (
             <div className="text-center py-16">
-              <div className="bg-gradient-to-br from-purple-100 to-pink-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
-                <BookOpen className="w-10 h-10 text-purple-500" />
+              <div className="bg-gradient-to-br from-purple-500/20 to-primary-500/20 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 border border-purple-500/30">
+                <BookOpen className="w-10 h-10 text-purple-400" />
               </div>
-              <h3 className="text-xl font-bold text-gray-800 mb-2">No lessons yet</h3>
-              <p className="text-gray-600 mb-6">Create your first lesson to get started!</p>
-              <Link 
+              <h3 className="text-xl font-bold text-gray-100 mb-2">No lessons yet</h3>
+              <p className="text-gray-300 mb-6">Create your first lesson to get started!</p>
+              <Link
                 href="/create"
-                className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-3 rounded-xl font-semibold hover:from-purple-600 hover:to-pink-600 transition-all"
+                className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-primary-500 text-white px-6 py-3 rounded-xl font-semibold hover:from-purple-600 hover:to-primary-600 transition-all"
               >
                 <Sparkles className="w-5 h-5" />
                 Create Lesson
@@ -122,24 +122,24 @@ export default function DashboardPage() {
           ) : (
             <div className="grid md:grid-cols-2 gap-6">
               {lessons.slice(0, 4).map((lesson) => (
-                <div 
+                <div
                   key={lesson.id}
-                  className="border-2 border-gray-200 rounded-2xl p-6 hover:border-purple-300 hover:shadow-lg transition-all"
+                  className="border-2 border-purple-500/30 bg-dark-700 rounded-2xl p-6 hover:border-purple-400/50 hover:shadow-lg transition-all"
                 >
                   <div className="flex items-start justify-between mb-3">
                     <div className="flex-1">
                       <div className="flex items-center gap-2 mb-2">
-                        <span className="text-xs font-semibold bg-purple-100 text-purple-700 px-2 py-1 rounded">
+                        <span className="text-xs font-semibold bg-purple-500/20 text-purple-300 px-2 py-1 rounded border border-purple-500/30">
                           {lesson.grade_level}
                         </span>
-                        <span className="text-xs font-semibold bg-pink-100 text-pink-700 px-2 py-1 rounded">
+                        <span className="text-xs font-semibold bg-primary-500/20 text-primary-300 px-2 py-1 rounded border border-primary-500/30">
                           {lesson.subject}
                         </span>
                       </div>
-                      <h3 className="text-lg font-bold text-gray-900 mb-1 line-clamp-2">
+                      <h3 className="text-lg font-bold text-gray-100 mb-1 line-clamp-2">
                         {lesson.title}
                       </h3>
-                      <div className="flex items-center gap-2 text-sm text-gray-500">
+                      <div className="flex items-center gap-2 text-sm text-gray-400">
                         <Clock className="w-4 h-4" />
                         {formatDate(lesson.created_at)}
                       </div>
@@ -149,14 +149,14 @@ export default function DashboardPage() {
                   <div className="flex items-center gap-2 mt-4">
                     <Link
                       href={`/library?view=${lesson.id}`}
-                      className="flex-1 flex items-center justify-center gap-2 bg-purple-100 text-purple-700 px-4 py-2 rounded-lg font-semibold hover:bg-purple-200 transition-colors"
+                      className="flex-1 flex items-center justify-center gap-2 bg-purple-500/20 text-purple-300 px-4 py-2 rounded-lg font-semibold hover:bg-purple-500/30 transition-colors border border-purple-500/30"
                     >
                       <Eye className="w-4 h-4" />
                       View
                     </Link>
                     <button
                       onClick={() => handleDelete(lesson.id)}
-                      className="flex items-center justify-center gap-2 bg-red-100 text-red-700 px-4 py-2 rounded-lg font-semibold hover:bg-red-200 transition-colors"
+                      className="flex items-center justify-center gap-2 bg-red-500/20 text-red-300 px-4 py-2 rounded-lg font-semibold hover:bg-red-500/30 transition-colors border border-red-500/30"
                     >
                       <Trash2 className="w-4 h-4" />
                     </button>
@@ -169,19 +169,19 @@ export default function DashboardPage() {
 
         {/* Stats */}
         <div className="grid md:grid-cols-3 gap-6 mt-8">
-          <div className="bg-gradient-to-br from-blue-50 to-blue-100 border-2 border-blue-200 rounded-2xl p-6">
-            <div className="text-3xl font-bold text-blue-600 mb-1">{lessons.length}</div>
-            <div className="text-blue-700 font-medium">Total Lessons</div>
+          <div className="bg-gradient-to-br from-primary-500/10 to-primary-600/10 border-2 border-primary-500/30 rounded-2xl p-6">
+            <div className="text-3xl font-bold text-primary-400 mb-1">{lessons.length}</div>
+            <div className="text-primary-300 font-medium">Total Lessons</div>
           </div>
-          <div className="bg-gradient-to-br from-green-50 to-green-100 border-2 border-green-200 rounded-2xl p-6">
-            <div className="text-3xl font-bold text-green-600 mb-1">
-              {Math.max(0, 5 - lessons.length)}
+          <div className="bg-gradient-to-br from-secondary-500/10 to-secondary-600/10 border-2 border-secondary-500/30 rounded-2xl p-6">
+            <div className="text-3xl font-bold text-secondary-400 mb-1">
+              {Math.max(0, 1 - lessons.length)}
             </div>
-            <div className="text-green-700 font-medium">Lessons Remaining (Free)</div>
+            <div className="text-secondary-300 font-medium">Lessons Remaining (Free)</div>
           </div>
-          <div className="bg-gradient-to-br from-purple-50 to-purple-100 border-2 border-purple-200 rounded-2xl p-6">
-            <div className="text-3xl font-bold text-purple-600 mb-1">K-5</div>
-            <div className="text-purple-700 font-medium">Grade Levels</div>
+          <div className="bg-gradient-to-br from-purple-500/10 to-purple-600/10 border-2 border-purple-500/30 rounded-2xl p-6">
+            <div className="text-3xl font-bold text-purple-400 mb-1">K-12</div>
+            <div className="text-purple-300 font-medium">Grade Levels</div>
           </div>
         </div>
       </div>

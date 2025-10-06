@@ -18,7 +18,7 @@ export default function LibraryPage() {
   const [filterGrade, setFilterGrade] = useState('All')
   const [filterSubject, setFilterSubject] = useState('All')
 
-  const gradeLevels = ['All', 'Kindergarten', '1st Grade', '2nd Grade', '3rd Grade', '4th Grade', '5th Grade']
+  const gradeLevels = ['All', 'Kindergarten', '1st Grade', '2nd Grade', '3rd Grade', '4th Grade', '5th Grade', '6th Grade', '7th Grade', '8th Grade', '9th Grade', '10th Grade', '11th Grade', '12th Grade']
   const subjects = ['All', 'Math', 'Science', 'Reading', 'Writing', 'Social Studies', 'Art']
 
   useEffect(() => {
@@ -94,22 +94,22 @@ export default function LibraryPage() {
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-purple-50 via-blue-50 to-pink-50 flex items-center justify-center">
-        <Loader className="w-12 h-12 text-purple-500 animate-spin" />
+      <div className="min-h-screen bg-gradient-to-br from-dark-900 via-dark-800 to-dark-900 flex items-center justify-center">
+        <Loader className="w-12 h-12 text-purple-400 animate-spin" />
       </div>
     )
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 via-blue-50 to-pink-50">
+    <div className="min-h-screen bg-gradient-to-br from-dark-900 via-dark-800 to-dark-900">
       <div className="max-w-7xl mx-auto px-4 py-8">
         <div className="mb-8">
-          <h1 className="text-4xl font-bold text-gray-900 mb-2">My Lesson Library</h1>
-          <p className="text-gray-600 text-lg">Browse and manage your saved lessons</p>
+          <h1 className="text-4xl font-bold text-gray-100 mb-2">My Lesson Library</h1>
+          <p className="text-gray-300 text-lg">Browse and manage your saved lessons</p>
         </div>
 
         {/* Filters */}
-        <div className="bg-white rounded-3xl shadow-xl p-6 mb-8 border-2 border-purple-100">
+        <div className="bg-dark-800 rounded-3xl shadow-xl p-6 mb-8 border-2 border-purple-500/30">
           <div className="grid md:grid-cols-3 gap-4">
             <div className="relative">
               <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
@@ -118,14 +118,14 @@ export default function LibraryPage() {
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 placeholder="Search lessons..."
-                className="w-full pl-12 pr-4 py-3 border-2 border-gray-200 rounded-xl focus:border-purple-500 focus:outline-none transition-colors"
+                className="w-full pl-12 pr-4 py-3 border-2 border-gray-600 bg-dark-700 text-gray-100 rounded-xl focus:border-purple-500 focus:outline-none transition-colors placeholder-gray-400"
               />
             </div>
 
             <select
               value={filterGrade}
               onChange={(e) => setFilterGrade(e.target.value)}
-              className="px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-purple-500 focus:outline-none transition-colors"
+              className="px-4 py-3 border-2 border-gray-600 bg-dark-700 text-gray-100 rounded-xl focus:border-purple-500 focus:outline-none transition-colors"
             >
               {gradeLevels.map(level => (
                 <option key={level} value={level}>{level}</option>
@@ -135,7 +135,7 @@ export default function LibraryPage() {
             <select
               value={filterSubject}
               onChange={(e) => setFilterSubject(e.target.value)}
-              className="px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-purple-500 focus:outline-none transition-colors"
+              className="px-4 py-3 border-2 border-gray-600 bg-dark-700 text-gray-100 rounded-xl focus:border-purple-500 focus:outline-none transition-colors"
             >
               {subjects.map(subj => (
                 <option key={subj} value={subj}>{subj}</option>
@@ -145,18 +145,18 @@ export default function LibraryPage() {
         </div>
 
         {/* Lessons Grid */}
-        <div className="bg-white rounded-3xl shadow-xl p-8 border-2 border-purple-100">
+        <div className="bg-dark-800 rounded-3xl shadow-xl p-8 border-2 border-purple-500/30">
           {filteredLessons.length === 0 ? (
             <div className="text-center py-16">
-              <div className="bg-gradient-to-br from-purple-100 to-pink-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
-                <BookOpen className="w-10 h-10 text-purple-500" />
+              <div className="bg-gradient-to-br from-purple-500/20 to-primary-500/20 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 border border-purple-500/30">
+                <BookOpen className="w-10 h-10 text-purple-400" />
               </div>
-              <h3 className="text-xl font-bold text-gray-800 mb-2">
+              <h3 className="text-xl font-bold text-gray-100 mb-2">
                 {searchQuery || filterGrade !== 'All' || filterSubject !== 'All'
                   ? 'No lessons found'
                   : 'No lessons yet'}
               </h3>
-              <p className="text-gray-600">
+              <p className="text-gray-300">
                 {searchQuery || filterGrade !== 'All' || filterSubject !== 'All'
                   ? 'Try adjusting your filters'
                   : 'Create your first lesson to get started!'}
@@ -167,24 +167,24 @@ export default function LibraryPage() {
               {filteredLessons.map((lesson) => (
                 <div
                   key={lesson.id}
-                  className="border-2 border-gray-200 rounded-2xl p-6 hover:border-purple-300 hover:shadow-lg transition-all cursor-pointer"
+                  className="border-2 border-purple-500/30 bg-dark-700 rounded-2xl p-6 hover:border-purple-400/50 hover:shadow-lg transition-all cursor-pointer"
                   onClick={() => setSelectedLesson(lesson)}
                 >
                   <div className="flex items-center gap-2 mb-3">
-                    <span className="text-xs font-semibold bg-purple-100 text-purple-700 px-2 py-1 rounded">
+                    <span className="text-xs font-semibold bg-purple-500/20 text-purple-300 px-2 py-1 rounded border border-purple-500/30">
                       {lesson.grade_level}
                     </span>
-                    <span className="text-xs font-semibold bg-pink-100 text-pink-700 px-2 py-1 rounded">
+                    <span className="text-xs font-semibold bg-primary-500/20 text-primary-300 px-2 py-1 rounded border border-primary-500/30">
                       {lesson.subject}
                     </span>
                   </div>
-                  <h3 className="text-lg font-bold text-gray-900 mb-2 line-clamp-2">
+                  <h3 className="text-lg font-bold text-gray-100 mb-2 line-clamp-2">
                     {lesson.title}
                   </h3>
-                  <p className="text-sm text-gray-600 mb-3 line-clamp-2">
+                  <p className="text-sm text-gray-300 mb-3 line-clamp-2">
                     {lesson.prompt}
                   </p>
-                  <p className="text-xs text-gray-500 mb-4">{formatDate(lesson.created_at)}</p>
+                  <p className="text-xs text-gray-400 mb-4">{formatDate(lesson.created_at)}</p>
 
                   <div className="flex items-center gap-2">
                     <button
@@ -192,7 +192,7 @@ export default function LibraryPage() {
                         e.stopPropagation()
                         handleDownload(lesson)
                       }}
-                      className="flex-1 flex items-center justify-center gap-2 bg-purple-100 text-purple-700 px-3 py-2 rounded-lg text-sm font-semibold hover:bg-purple-200 transition-colors"
+                      className="flex-1 flex items-center justify-center gap-2 bg-purple-500/20 text-purple-300 px-3 py-2 rounded-lg text-sm font-semibold hover:bg-purple-500/30 transition-colors border border-purple-500/30"
                     >
                       <Download className="w-4 h-4" />
                       PDF
@@ -202,7 +202,7 @@ export default function LibraryPage() {
                         e.stopPropagation()
                         handleDelete(lesson.id)
                       }}
-                      className="flex items-center justify-center bg-red-100 text-red-700 px-3 py-2 rounded-lg text-sm font-semibold hover:bg-red-200 transition-colors"
+                      className="flex items-center justify-center bg-red-500/20 text-red-300 px-3 py-2 rounded-lg text-sm font-semibold hover:bg-red-500/30 transition-colors border border-red-500/30"
                     >
                       <Trash2 className="w-4 h-4" />
                     </button>
@@ -217,8 +217,8 @@ export default function LibraryPage() {
       {/* Lesson Modal */}
       {selectedLesson && (
         <div className="fixed inset-0 bg-black/50 flex items-center justify-center p-4 z-50" onClick={() => setSelectedLesson(null)}>
-          <div className="bg-white rounded-3xl max-w-4xl w-full max-h-[90vh] overflow-y-auto" onClick={(e) => e.stopPropagation()}>
-            <div className="sticky top-0 bg-gradient-to-r from-purple-500 to-pink-500 p-6 text-white flex items-start justify-between">
+          <div className="bg-dark-800 rounded-3xl max-w-4xl w-full max-h-[90vh] overflow-y-auto border border-purple-500/30" onClick={(e) => e.stopPropagation()}>
+            <div className="sticky top-0 bg-gradient-to-r from-purple-500 to-primary-500 p-6 text-white flex items-start justify-between">
               <div className="flex-1">
                 <div className="flex items-center gap-2 mb-2">
                   <span className="text-sm font-semibold opacity-90">
@@ -246,13 +246,13 @@ export default function LibraryPage() {
             <div className="p-8 space-y-6">
               <section>
                 <div className="flex items-center gap-2 mb-3">
-                  <Target className="w-5 h-5 text-purple-500" />
-                  <h4 className="text-lg font-bold text-gray-800">Learning Objectives</h4>
+                  <Target className="w-5 h-5 text-purple-400" />
+                  <h4 className="text-lg font-bold text-gray-100">Learning Objectives</h4>
                 </div>
                 <ul className="space-y-2">
                   {selectedLesson.content.objectives.map((obj, i) => (
-                    <li key={i} className="flex items-start gap-2 p-2 bg-purple-50 rounded-lg">
-                      <CheckCircle className="w-5 h-5 text-purple-500 flex-shrink-0 mt-0.5" />
+                    <li key={i} className="flex items-start gap-2 p-2 bg-purple-500/10 rounded-lg border border-purple-500/20">
+                      <CheckCircle className="w-5 h-5 text-purple-400 flex-shrink-0 mt-0.5" />
                       <span className="text-gray-700 text-sm">{obj}</span>
                     </li>
                   ))}
